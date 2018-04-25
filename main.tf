@@ -3,7 +3,7 @@ resource "datadog_timeboard" "asg" {
   description = "A generated timeboard for ASG"
 
   template_variable {
-    default = "*"
+    default = "${var.asg_name}"
     name    = "asg_name"
     prefix  = "autoscaling_group"
   }
