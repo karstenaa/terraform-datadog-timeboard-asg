@@ -1,4 +1,6 @@
 resource "datadog_timeboard" "asg" {
+  count = "${var.enabled}"
+
   title       = "${var.product_domain} - ${var.asg_name} - ASG"
   description = "A generated timeboard for ASG"
 

@@ -7,3 +7,9 @@ variable "asg_name" {
   type        = "string"
   description = "The name of the auto scaling group"
 }
+
+variable "enabled" {
+  type        = "string"
+  default     = true
+  description = "To enable this module"
+}
